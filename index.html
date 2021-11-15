@@ -63,7 +63,7 @@
             ДЛЯ ВАШЕГО БИЗНЕСА
           </h1>
           <li class="list">
-            <button type="button" class="button-primary">
+            <button type="button" class="button-primary" data-modal-open>
               Заказать услугу
             </button>
           </li>
@@ -432,7 +432,7 @@
           </li>
           <li class="footer-right-item">
             <a href="" class="footer-right-link link">
-              <svg class="footer-right-icoons" >
+              <svg class="footer-right-icoons">
                 <use href="./images/icoons.svg#icon-linkedin"></use>
               </svg>
             </a>
@@ -441,5 +441,16 @@
       </div>
     </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="backdrop-modalka">
+        <button type="button" class="backdrop-button" data-modal-close>
+          <svg class="backdrop-icoon">
+            <use href="./images/icoons.svg#icon-close-black">
+            </use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
