@@ -35,18 +35,19 @@ body {
 .header {
   background-color: var(--white-color);
   padding-top: 24px;
-  padding-bottom: 24px;
   border-bottom: 1px solid #ececec;
-}
-.navigation {
-  display: flex;
-  align-items: center;
 }
 .navigation-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
+.navigation {
+  display: flex;
+  align-items: baseline;
+}
+
 .site-nave {
   display: flex;
 }
@@ -81,33 +82,44 @@ body {
 .logo :hover {
   color: #000000;
 }
+.item {
+  position: relative;
+  padding-bottom: 24px;
+}
 .link {
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   text-decoration: none;
+  padding-bottom: 24px;
 }
 .link:hover,
 .link:focus {
   color: var(--accent-color);
 }
 .link.current {
-  position: relative;
   color: var(--accent-color);
 }
-.link.current::before {
+.item .current::after {
+  display: block;
   content: "";
   position: absolute;
-  bottom: -31px;
+  bottom: 0;
   width: 100%;
   height: 4px;
+  border-radius: 2px;
   background-color: var(--accent-color);
 }
 /*-----------------contact-header--------*/
 
 .contact-header {
   display: flex;
+}
+.item-contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .item-contact:not(:last-child) {
   margin-right: 50px;
@@ -146,7 +158,7 @@ body {
   fill: var(--accent-color);
 }
 .header-email-svg {
-  width: 20px;
+  width: 16px;
   height: 20px;
   fill: var(--primary-text-color);
   margin-right: 10px;
